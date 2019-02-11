@@ -118,29 +118,37 @@ MAIN
 
 			<div class="col-md-4 order-2 order-md-12">
 				<div class="d-md-flex align-items-center p-1 justify-content-center ">
-					<form class="rounded" id="formBlock1" action="https://formspree.io/imdurgeshgupta@gmail.com" method="POST">
+					<!-- <form class="rounded" id="formBlock1" action="https://formspree.io/imdurgeshgupta@gmail.com" method="POST"> -->
+					<form autocomplete="false" role="form" method="post" action="https://marketing.webanaya.com/form/submit?formId=14" id="mauticform_pankajcutiepie" data-mautic-form="pankajcutiepie" enctype="multipart/form-data">
+						<div class="mauticform-error" id="mauticform_pankajcutiepie_error"></div>
+        <div class="mauticform-message" id="mauticform_pankajcutiepie_message"></div>
 					<!-- <form class="border rounded p-5 bg-success" id="formBlock"> -->
 						<h6 class="mb-4 text-center bg-danger p-2 text-white text-uppercase">Request a Call Back</h6>
 						<div class="form-group">
-							<input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
+							<input type="text" name="mauticform[f_name]" id="mauticform_input_pankajcutiepie_f_name" class="form-control" placeholder="Your Name" required="">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="phone" name="phone" placeholder="Your contact no." required="">
+							<input type="text" class="form-control" id="mauticform_input_pankajcutiepie_phone" name="mauticform[phone]" placeholder="Your contact no." required="">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="age" name="age" placeholder="Your Child Age" required="">
+							<input type="text" class="form-control" id="mauticform_input_pankajcutiepie_age" name="mauticform[age]" placeholder="Your Child Age" required="">
 						</div>
 						<!-- <div class="form-group">
 
 							<textarea class="form-control" rows="5" id="message" name="message" placeholder="Your message" required=""></textarea>
 						</div> -->
-
-						<button type="submit" class="btn btn-warning btn-round btn-block shadow-sm">Submit Now!</button>
-						<div id="thankyouBlock" style="display:none" class="bg-success">
+						<input type="hidden" name="mauticform[formId]" id="mauticform_pankajcutiepie_id" value="14">
+		        <input type="hidden" name="mauticform[return]" id="mauticform_pankajcutiepie_return" value="">
+		        <input type="hidden" name="mauticform[formName]" id="mauticform_pankajcutiepie_name" value="pankajcutiepie">
+						<!-- <button type="submit" class="btn btn-warning btn-round btn-block shadow-sm">Submit Now!</button> -->
+						<div id="mauticform_pankajcutiepie_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-4">
+						<button type="submit" name="mauticform[submit]" id="mauticform_input_pankajcutiepie_submit" value="" class="btn btn-warning btn-round btn-block shadow-sm">Submit</button>
+				</div>
+						<!-- <div id="thankyouBlock" style="display:none" class="bg-success">
 	<p>
 		Thank you for filling out the form. I care a lot about it.
 	</p>
-</div>
+</div> -->
 					</form>
 				</div>
 			</div>
@@ -200,7 +208,7 @@ Testimonial
 		<div class="row justify-content-between align-items-center text-md-center text-lg-left">
 			<div class="col-md-12 text-center">
 				<h2 class="font-weight-light text-white mb-4">Interested ? Let's Connect</h2>
-				<a href="#enquiry" class="btn btn-lg btn-info">Get a Call Back</a>
+				<a href="tel:9711935466" class="btn btn-lg btn-info">Get a Call Back</a>
 			</div>
 
 		</div>
@@ -279,46 +287,26 @@ AOS.init({
   }
 });
 
-$(document).ready(function() {
+</script>
 
-	$('#formBlock').on('submit', function(e) {
-		e.preventDefault();
-
-		//get the name field value
-		var name = $('#name').val();
-		//get the name field value
-		var email = $('#email').val();
-		//get the comments
-		var phone = $('#phone').val();
-		var company = $('#company').val();
-
-		//pretend we don't need validation
-
-		//send to formspree
-		$.ajax({
-			url:'https://formspree.io/f08c542864949541c69e1ee41f866357',
-			method:'POST',
-			data:{
-				name:name,
-				_replyto:email,
-				 email:email,
-				phone:phone,
-				company:company,
-				_subject:'Beemed Landing Page Submission',
-			},
-			dataType:"json",
-			success:function() {
-				console.log('success');
-				$('#formBlock').hide();
-				$('#thankyouBlock').show();
-			}
-
-		});
-
-	});
-
-});
-
+<script type="text/javascript">
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'https://marketing.webanaya.com/media/js/mautic-form.js';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://marketing.webanaya.com';
+        var MauticLang   = {
+            'submittingMessage': "Please wait..."
+        }
+    }
+</script>
 
 </body>
 </html>
