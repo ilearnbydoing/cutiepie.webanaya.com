@@ -19,6 +19,24 @@
 
 <!-- Animation CSS -->
 <link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+<script type="text/javascript">
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'https://marketing.webanaya.com/media/js/mautic-form.js';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://marketing.webanaya.com';
+        var MauticLang   = {
+            'submittingMessage': "Please wait..."
+        }
+    }
+</script>
 
 </head>
 
@@ -137,9 +155,6 @@ MAIN
 
 							<textarea class="form-control" rows="5" id="message" name="message" placeholder="Your message" required=""></textarea>
 						</div> -->
-						<input type="hidden" name="mauticform[formId]" id="mauticform_pankajcutiepie_id" value="14">
-		        <input type="hidden" name="mauticform[return]" id="mauticform_pankajcutiepie_return" value="">
-		        <input type="hidden" name="mauticform[formName]" id="mauticform_pankajcutiepie_name" value="pankajcutiepie">
 						<!-- <button type="submit" class="btn btn-warning btn-round btn-block shadow-sm">Submit Now!</button> -->
 						<div id="mauticform_pankajcutiepie_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-4">
 						<button type="submit" name="mauticform[submit]" id="mauticform_input_pankajcutiepie_submit" value="" class="btn btn-warning btn-round btn-block shadow-sm">Submit</button>
@@ -149,6 +164,10 @@ MAIN
 		Thank you for filling out the form. I care a lot about it.
 	</p>
 </div> -->
+
+<input type="hidden" name="mauticform[formId]" id="mauticform_pankajcutiepie_id" value="14">
+<input type="hidden" name="mauticform[return]" id="mauticform_pankajcutiepie_return" value="">
+<input type="hidden" name="mauticform[formName]" id="mauticform_pankajcutiepie_name" value="pankajcutiepie">
 					</form>
 				</div>
 			</div>
@@ -289,24 +308,6 @@ AOS.init({
 
 </script>
 
-<script type="text/javascript">
-    /** This section is only needed once per page if manually copying **/
-    if (typeof MauticSDKLoaded == 'undefined') {
-        var MauticSDKLoaded = true;
-        var head            = document.getElementsByTagName('head')[0];
-        var script          = document.createElement('script');
-        script.type         = 'text/javascript';
-        script.src          = 'https://marketing.webanaya.com/media/js/mautic-form.js';
-        script.onload       = function() {
-            MauticSDK.onLoad();
-        };
-        head.appendChild(script);
-        var MauticDomain = 'https://marketing.webanaya.com';
-        var MauticLang   = {
-            'submittingMessage': "Please wait..."
-        }
-    }
-</script>
 
 </body>
 </html>
